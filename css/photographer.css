@@ -5,7 +5,6 @@
 .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
-    margin: 0 100px;
     padding: 0 50px;
     display: flex;
     align-items: center;
@@ -26,6 +25,10 @@
 }
 
 .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 5px;
     background-color: #DB8876;
     width: 50%;
@@ -52,6 +55,8 @@
     text-align: center;
 }
 
+
+
 form {
     display: flex;
     width: 100%;
@@ -72,11 +77,15 @@ form div {
     margin-bottom: 26px;
 }
 
-form input {
+form input, form textarea {
     width: 100%;
     height: 68px;
     border: none;
     border-radius: 5px;
+}
+
+.error {
+    border: 2px solid red;
 }
 
 .photograph-header img {
@@ -86,6 +95,9 @@ form input {
     border-radius: 50%;
     margin-bottom: 2rem;
     filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
+}
+.photograph-informations{
+    order: -1;
 }
 .photograph-informations *{margin: 0;}
 .photograph-informations h2 {
@@ -107,4 +119,138 @@ form input {
     font-size: 18px;
     font-weight: 400;
     line-height: 3rem;
+}
+
+.priceContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 376px;
+    background-color: #DB8876;
+    border-radius: 5px 5px 0 0;
+    padding: 15px 20px;
+    position: fixed;
+    bottom: 0;
+    right: 150px;
+    font-weight: 500;
+    font-size: 24px;
+
+}
+.priceContainer p {
+    margin: 0;
+}
+.favorites::after{
+    content: url(../assets/icons/favorite.svg);
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.mediaSection{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.mediaSection img, .mediaSection video{
+    object-fit: cover;
+    border-radius: 5px;
+    height: 300px;
+    width: 350px;
+    cursor: pointer;
+}
+
+.mediaInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: start;
+    color: #901C1C;
+}
+.mediaTitle{
+    font-weight: 400;
+    font-size: 24px;
+}
+.mediaLikes{
+    font-weight: 400;
+    font-size:16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.mediaInfo .mediaLikeButton{
+    /* content: url(../assets/icons/favorite-red.svg); */
+    vertical-align: middle;
+    height: 24px;
+    width: 24px;
+}
+
+#lightbox_modal{
+    display: none;
+}
+
+#lightbox_modal .modal {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+#lightbox_modal .modal .card__media{
+    width: 1050px;
+    height: 900px;
+    flex-grow: 1;
+    object-fit: contain;
+}
+
+#lightbox_modal .modal #mediaNavContainer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+#lightbox_modal .modal #mediaNavContainer #navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#lightbox_modal .modal #mediaNavContainer #navbar #navigationButtons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    width: 90vw;
+}
+#lightbox_modal .modal #mediaNavContainer #navbar p{
+    font-size: 1rem;
+    color: #901C1C;
+    font-size: 2rem;
+    line-height: 0;
+}
+
+#lightbox_modal .modal #mediaNavContainer #navbar img{ cursor: pointer;}
+
+#lightbox_modal .modal #lbCloseBtn{
+    align-self: flex-start;
+    cursor: pointer;
+}
+#lightbox_modal .modal nav{
+    display: flex;
+    gap: 2rem;
+    order: 2;
 }

@@ -2,38 +2,81 @@
 <html>
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <title>Fisheye - photographe </title>
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fisheye - photographe</title>
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.png" class="logo" />
+      <a href="/"
+        ><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page"
+      /></a>
     </header>
     <main id="main">
       <div class="photograph-header">
-        <div class="photograph-informations"></div>
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <button class="contact_button" onclick="displayModal()">
+          Contactez-moi
+        </button>
       </div>
+      <div id="orderByContainer">
+        <span>Trier par</span>
+        <select id="sort-filter">
+          <option value="popularité">Popularité</option>
+          <option value="date">Date</option>
+          <option value="titre">Titre</option>
+        </select>
+      </div>
+      <div class="mediaSection"></div>
     </main>
     <div id="contact_modal">
-			<div class="modal">
-				<header>
+      <div class="modal">
+        <header>
           <h2>Contactez-moi</h2>
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
-				<form>
-					<div>
-						<label>Prénom</label>
-						<input />
-					</div>
+        <form id="form">
+          <div>
+            <label>Prénom</label>
+            <input id="first" />
+          </div>
+          <div>
+            <label>Nom</label>
+            <input id="last" />
+          </div>
+          <div>
+            <label>Email</label>
+            <input id="email" />
+          </div>
+          <div>
+            <label>Message</label>
+            <textarea id="message"></textarea>
+          </div>
           <button class="contact_button">Envoyer</button>
-				</form>
-			</div>
-		</div>
-    <script src="/scripts/pages/photographer.js"></script>
+        </form>
+      </div>
+    </div>
+
+    <div id="lightbox_modal">
+      <div class="modal">
+        <img src="assets/icons/closeLightBox.svg" id="lbCloseBtn" />
+        <div id="mediaNavContainer">
+          <div id="navbar">
+            <p class="Imgtitle"></p>
+            <nav id="navigationButtons">
+              <img src="assets/icons/arrowPrev.svg" class="prevImage" />
+              <img src="assets/icons/arrowNext.svg" class="nextImage" />
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/scripts/pages/photographer.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
+    <script src="/scripts/utils/lightBox.js"></script>
   </body>
 </html>

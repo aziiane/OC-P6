@@ -1,8 +1,13 @@
 @import url("photographer.css");
 
+html{
+    max-width: 1440px;
+    margin: auto;
+}
+
 body {
     font-family: "DM Sans", sans-serif;
-    margin: 0;
+    margin: 40px 100px;
 }
 
 
@@ -41,6 +46,15 @@ h1 {
 
 .photographer_section article * {
     margin: 0;
+}
+
+.photographer_section article a{
+    text-decoration: none;
+    text-align: center;
+}
+.photographer_section article a:hover{
+    text-decoration: underline;
+    text-decoration-color: #D3573C;
 }
 
 .photographer_section article h2 {
