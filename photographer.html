@@ -23,9 +23,9 @@
           Contactez-moi
         </button>
       </div>
-      <div id="orderByContainer">
-        <span>Trier par</span>
-        <select id="sort-filter">
+      <div id="orderByContainer" aria-label="Trier les images">
+        <label for="sort-filter">Trier par</label>
+        <select id="sort-filter" name="sort-filter">
           <option value="popularité">Popularité</option>
           <option value="date">Date</option>
           <option value="titre">Titre</option>
@@ -69,7 +69,7 @@
             <p class="Imgtitle"></p>
             <nav id="navigationButtons">
               <img src="assets/icons/arrowPrev.svg" class="prevImage" />
-              <img src="assets/icons/arrowNext.svg" class="nextImage" />
+              <img src="assets/icons/arrowNext.svg" class="nextImage"/>
             </nav>
           </div>
         </div>

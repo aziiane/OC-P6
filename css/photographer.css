@@ -254,3 +254,12 @@ form input, form textarea {
     gap: 2rem;
     order: 2;
 }
+
+#sort-filter{
+    background-color: #901C1C;
+    padding: 15px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}

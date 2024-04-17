@@ -12,8 +12,8 @@ export default class PhotographerVideo {
   render() {
     const mediaContainer = document.createElement("div");
     mediaContainer.classList.add("mediaContainer", "videoContainer");
-    const template = `<video src="assets/images/${this.photographerId}/${this.video}" alt="${this.title}" class="card__media" data-id="${this.id}" data-title="${this.title}" data-likes="${this.likes}" data-date="${this.date}"></video>
-        <div class="mediaInfo"><span class="mediaTitle">${this.title}</span><div class="mediaLikes"><span>${this.likes}</span><image class="mediaLikeButton" id="content-${this.id}" src="../../assets/icons/favorite-red.svg"/></div></div>`;
+    const template = `<video src="assets/images/${this.photographerId}/${this.video}" alt="${this.title}" tabIndex="0" role="button" class="card__media" data-id="${this.id}" data-title="${this.title}" data-likes="${this.likes}" data-date="${this.date}"></video>
+        <div class="mediaInfo"><span class="mediaTitle">${this.title}</span><div class="mediaLikes"><span>${this.likes}</span><image class="mediaLikeButton" role="button" tabIndex="0" aria-label="like ${this.title}" id="content-${this.id}" src="../../assets/icons/favorite-red.svg"/></div></div>`;
     mediaContainer.innerHTML = template;
     return mediaContainer;
   }
