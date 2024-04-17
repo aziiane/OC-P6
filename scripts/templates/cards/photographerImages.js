@@ -13,7 +13,7 @@ export default class PhotographerImages {
     const mediaContainer = document.createElement("div");
     mediaContainer.classList.add("mediaContainer", "imageContainer");
     const template = `<img src="assets/images/${this.photographerId}/${this.image}" tabIndex="0" role="button" alt="${this.title}" class="card__media" data-id="${this.id}" data-title="${this.title}" data-likes="${this.likes}" data-date="${this.date}">
-    <div class="mediaInfo"><span class="mediaTitle">${this.title}</span><div class="mediaLikes"><span>${this.likes}</span><image class="mediaLikeButton" tabIndex="0" aria-label="like ${this.title}" role="button" id="content-${this.id}" src="../../assets/icons/favorite-red.svg"/></div></div>`;
+    <div class="mediaInfo"><span class="mediaTitle">${this.title}</span><div class="mediaLikes"><span>${this.likes}</span><image class="mediaLikeButton" tabIndex="0" aria-label="like ${this.title}" role="button" id="content-${this.id}" src="assets/icons/favorite-red.svg"/></div></div>`;
     mediaContainer.innerHTML = template;
     return mediaContainer;
   }
