@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
@@ -37,23 +37,23 @@
       <div class="modal">
         <header>
           <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" id="contactClose" tabindex="0" aria-label="fermer contact" role="button"/>
+          <img src="assets/icons/close.svg" onclick="closeModal()" alt="fermer contact" id="contactClose" tabindex="0" aria-label="fermer contact" role="button"/>
         </header>
         <form id="form">
           <div>
-            <label>Prénom</label>
+            <label for="first">Prénom</label>
             <input id="first" />
           </div>
           <div>
-            <label>Nom</label>
+            <label for="last">Nom</label>
             <input id="last" />
           </div>
           <div>
-            <label>Email</label>
+            <label for="email">Email</label>
             <input id="email" />
           </div>
           <div>
-            <label>Message</label>
+            <label for="message">Message</label>
             <textarea id="message"></textarea>
           </div>
           <button class="contact_button">Envoyer</button>
@@ -63,13 +63,13 @@
 
     <div id="lightbox_modal">
       <div class="modal">
-        <img src="assets/icons/closeLightBox.svg" id="lbCloseBtn" tabindex="0" aria-label="fermer lightbox" role="button"/>
+        <img src="assets/icons/closeLightBox.svg" id="lbCloseBtn" tabindex="0" aria-label="fermer lightbox" alt="fermer lightbox" role="button"/>
         <div id="mediaNavContainer">
           <div id="navbar">
             <p class="Imgtitle"></p>
             <nav id="navigationButtons">
-              <img src="assets/icons/arrowPrev.svg" class="prevImage" tabindex="0" aria-label="media précédent" role="button"/>
-              <img src="assets/icons/arrowNext.svg" class="nextImage" tabindex="0" aria-label="media suivante" role="button"/>
+              <img src="assets/icons/arrowPrev.svg" class="prevImage" tabindex="0" aria-label="media précédent" alt="media précédent" role="button"/>
+              <img src="assets/icons/arrowNext.svg" class="nextImage" tabindex="0" aria-label="media suivante" alt="media suivante" role="button"/>
             </nav>
           </div>
         </div>
