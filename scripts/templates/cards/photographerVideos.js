@@ -22,7 +22,7 @@ export default class PhotographerVideo {
     mediaContainer.classList.add("mediaContainer");
     const imageTitle = document.querySelector(".Imgtitle");
     imageTitle.innerHTML = this.title;
-    const template = `<video controls src="assets/images/${this.photographerId}/${this.video}" alt="${this.title}" class="card__media" data-id="${this.id}" data-title="${this.title}" data-likes="${this.likes}" data-date="${this.date}"></video>`;
+    const template = `<video controls autoplay src="assets/images/${this.photographerId}/${this.video}" alt="${this.title}" class="card__media" data-id="${this.id}" data-title="${this.title}" data-likes="${this.likes}" data-date="${this.date}"></video>`;
     mediaContainer.innerHTML = template;
     return mediaContainer;
   }

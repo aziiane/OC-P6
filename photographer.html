@@ -37,7 +37,7 @@
       <div class="modal">
         <header>
           <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <img src="assets/icons/close.svg" onclick="closeModal()" id="contactClose" tabindex="0" aria-label="fermer contact" role="button"/>
         </header>
         <form id="form">
           <div>
@@ -63,13 +63,13 @@
 
     <div id="lightbox_modal">
       <div class="modal">
-        <img src="assets/icons/closeLightBox.svg" id="lbCloseBtn" />
+        <img src="assets/icons/closeLightBox.svg" id="lbCloseBtn" tabindex="0" aria-label="fermer lightbox" role="button"/>
         <div id="mediaNavContainer">
           <div id="navbar">
             <p class="Imgtitle"></p>
             <nav id="navigationButtons">
-              <img src="assets/icons/arrowPrev.svg" class="prevImage" />
-              <img src="assets/icons/arrowNext.svg" class="nextImage"/>
+              <img src="assets/icons/arrowPrev.svg" class="prevImage" tabindex="0" aria-label="media précédent" role="button"/>
+              <img src="assets/icons/arrowNext.svg" class="nextImage" tabindex="0" aria-label="media suivante" role="button"/>
             </nav>
           </div>
         </div>

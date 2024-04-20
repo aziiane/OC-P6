@@ -1,13 +1,24 @@
 
 function displayModal() {
     const modal = document.getElementById("contact_modal");
+    const firstName = document.getElementById("first");
 	modal.style.display = "block";
+    firstName.focus();
 }
 
 function closeModal() {
     const modal = document.getElementById("contact_modal");
     modal.style.display = "none";
 }
+
+const closeBtn = document.getElementById("contactClose");
+closeBtn.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.code === "Space") {
+        event.preventDefault();
+        document.querySelector("body").focus();
+        closeModal();
+    }
+});
 
 //REGEX for Validation
 const nameRegex = /^([a-zA-Z\é\è\ê\ë\-]{2,})$/;

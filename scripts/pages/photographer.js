@@ -188,6 +188,12 @@ async function displayLightBox(photographerMedias) {
   }
 
   nextImageBtn.addEventListener("click", nextImgFunc);
+  nextImageBtn.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.code === "Space") {
+      event.preventDefault();
+      nextImgFunc();
+    }
+  })
   document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowRight" && document.getElementById("lightbox_modal").style.display !== "none") {
       event.preventDefault();
@@ -195,6 +201,12 @@ async function displayLightBox(photographerMedias) {
     }
   })
   prevImageBtn.addEventListener("click", prevImgFunc);
+  prevImageBtn.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.code === "Space") {
+      event.preventDefault();
+      prevImgFunc();
+    }
+  })
   document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft" && document.getElementById("lightbox_modal").style.display !== "none") {
       event.preventDefault();
